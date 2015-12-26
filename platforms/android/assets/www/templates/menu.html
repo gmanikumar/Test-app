@@ -1,0 +1,48 @@
+ <ons-page ng-controller="MenuController">
+ <div class="app-page takeout">
+
+    <ons-list modifier="categories">
+      <ons-list-item modifier="chevron" class="list-item-container" ng-repeat="item in items.results | filter:search:strict">
+        <ons-row>
+          <ons-col width="100px" style="overflow: hidden;">
+            <img ng-src="{{item.img}}" class="thumbnail">
+          </ons-col>
+          <ons-col>
+            <div class="item-content">
+              <div class="name">
+              {{item.name}} <span ng-bind-html="item.span"></span>  
+              </div>
+              <div class="price-tag">
+                <i class="ion-pricetag"></i> {{ item.price | currency }}
+              </div>
+              <div class="desc">
+                {{item.desc}}
+              </div>
+            </div>
+          </ons-col>
+          <ons-col width="35px">
+          <md-action-bar layout="row" 
+                             layout-align="end center"
+                             ng-if="!item.active">
+                             <md-button class="md-fab md-accent fab" 
+                                        aria-label="Add To Cart" 
+                                        ng-click="toggle(item);showAddedToast();"
+                                        ng-class="{active:item.active}">
+                                        <md-icon md-svg-src="img/icons/add.svg"></md-icon>
+                             </md-button>
+            </md-action-bar>
+            <md-action-bar layout="row" 
+                           layout-align="end center"
+                           ng-if="item.active">
+                           <md-button class="md-fab md-primary fab" 
+                                      aria-label="Remove From Cart" 
+                                      ng-click="toggle(item);showRemovedToast();"
+                                      ng-class="{active:item.active}">
+                                      <md-icon md-svg-src="img/icons/remove.svg"></md-icon>
+                           </md-button>
+            </md-action-bar>
+            </ons-col>
+        </ons-row>
+      </ons-list-item>
+      </ons-list>
+  </ons-page>

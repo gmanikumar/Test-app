@@ -1,0 +1,25 @@
+<md-bottom-sheet class="md-list md-has-header"> 
+    <md-subheader>Map</md-subheader>
+    <md-divider></md-divider>
+    
+    <md-card style="margin-top:25px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.6539357783104!2d-105.230233!3d20.642958000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84214579c251a659%3A0x7a0aa2967e7532e9!2sMi+Barra+Caf%C3%A9!5e0!3m2!1sen!2smx!4v1428862443839" width="100%" height="200px" frameborder="0" style="border:0;">
+        </iframe>
+    </md-card>
+    
+    <md-subheader>Quick Links</md-subheader>
+    <md-divider></md-divider>
+    <md-list layout="row" layout-align="center center"> 
+        <md-item ng-repeat="item in items">
+            <md-item-content flex class="inset" 
+                             href="{{item.href}}"> 
+                             <a flex aria-label="{{item.name}}"> 
+                             <md-icon md-svg-icon="{{item.icon}}" 
+                                      class="md-primary icon">
+                             </md-icon>
+                             </a>
+            </md-item-content> 
+        </md-item> 
+    </md-list>
+  
+</md-bottom-sheet>

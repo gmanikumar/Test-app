@@ -1,0 +1,76 @@
+<ons-page ng-controller="restaurantController" ng-init="getHours()">
+  <ons-toolbar>
+    <div class="left">
+    <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" fixed-width="false"></ons-icon></ons-toolbar-button>
+    </div>
+    <div class="center">Location</div>
+    <div class="right" ng-show="isFetching">
+      <ons-toolbar-button><ons-icon icon="ion-loading-c" fixed-width="false" ></ons-icon></ons-toolbar-button>
+    </div>
+  </ons-toolbar>
+
+  <div class="app-page">
+    <div class="app-page-photo">   
+      <ons-row class="app-map">   
+        <ons-col>
+          <map center="[43.664639, -79.384649]">
+            <marker
+                position="[43.664639, -79.384649]"
+                title="Signs Restaurant & Bar"
+                animation="Animation.BOUNCE" 
+                visible="true" ></marker>
+
+          </map>
+        </ons-col>
+      </ons-row>
+      <ons-list class="app-photo-buttons">
+        <ons-list-item modifier="action-buttons">
+            <ons-row class="action">
+              <ons-col class="action-col"> 
+                <div class="action-icon"><ons-icon icon="ion-ios-star-half"></ons-icon></div>
+                <div class="action-label">Rate</div>
+              </ons-col>
+
+              <ons-col class="action-col">
+                <div class="action-icon"><ons-icon icon="ion-bookmark"></ons-icon></div>
+                <div class="action-label">Favorite</div>
+              </ons-col>
+
+              <ons-col class="action-col">
+                <div class="action-icon" onclick="window.open('tel:647-428-3076', '_system', 'location=yes')"><ons-icon icon="ion-ios-telephone"></ons-icon></div>
+                <div class="action-label" onclick="window.open('tel:647-428-3076', '_system', 'location=yes')">Call</div>
+              </ons-col>
+
+              <ons-col class="action-col">
+                <div class="action-icon" onclick="window.open('http://maps.google.com/maps?q=43.664639,-79.384649', '_system', 'location=yes'), window.location('maps://maps.apple.com/?q=43.664639,-79.384649')"><ons-icon icon="ion-map"></ons-icon></div>
+                <div class="action-label" onclick="window.open('http://maps.google.com/maps?q=43.664639,-79.384649', '_system', 'location=yes'), window.location('maps://maps.apple.com/?q=43.664639,-79.384649')">Directions</div>
+              </ons-col>
+            </ons-row>
+        </ons-list-item>
+      </ons-list>
+
+      <ons-list modifier="inset" style="margin-top: 10px">
+        <ons-list-item>
+          <div class="app-open-desc">
+            <ons-icon icon="ion-android-clock"></ons-icon>
+            Monday <span class="label label-danger">{{ shours1 }}</span>
+          </div>
+        </ons-list-item>
+        <ons-list-item>
+          <div class="app-open-desc">
+            <ons-icon icon="ion-android-clock"></ons-icon>
+            Tuesday-Thursday <span class="label label-danger">{{ shours2 }}</span>
+          </div>
+        </ons-list-item>
+        <ons-list-item>
+          <div class="app-open-desc">
+            <ons-icon icon="ion-android-clock"></ons-icon>
+            Friday-Sunday <span class="label label-danger">{{ shours3 }}</span>
+          </div>
+        </ons-list-item>
+      </ons-list>
+      
+    </div>
+  </div>
+
+</ons-page>

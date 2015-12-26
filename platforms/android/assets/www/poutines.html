@@ -1,0 +1,31 @@
+<ons-page>
+  <ons-toolbar>
+    <div class="left">
+      <ons-back-button>Back</ons-back-button>
+    </div>
+    <div class="center">Poutines</div>
+  </ons-toolbar>
+
+  <div class="app-page" ng-controller="AppController">
+
+    <ons-list modifier="categories">
+      <ons-list-item modifier="chevron" class="list-item-container" ng-repeat="poutine in poutines.results">
+        <ons-row>
+          <ons-col>
+            <div class="item-content">
+                <div ng-bind-html="poutine.name"></div>
+              <div class="price-tag">
+                <i class="ion-pricetag"></i> {{ poutine.price | currency }}
+              </div>
+              <div class="desc">
+                {{ poutine.desc }}
+              </div>
+            </div>
+          </ons-col>
+        </ons-row>
+      </ons-list-item>       
+    </ons-list>
+
+  </div>
+
+</ons-page>  

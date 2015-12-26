@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<widget xmlns = "http://www.w3.org/ns/widgets"
+		xmlns:gap = "http://phonegap.com/ns/1.0"
+		id        = "com.signsrestaurant.app"
+		versionCode="1.00"
+		version   = "1.00">
+		<name>Signs Restaurant</name>
+		<description>
+Where Noise Meets Silence		</description>
+		<author href="http://signsrestaurant.ca" email="gmanikumar@umhs-sk.net">
+Gopalakrishnan Manikumar
+		</author>
+		<preference name="phonegap-version" value="cli-5.4.0" />
+        <preference name="android-build-tool" value="gradle" />
+        <preference name="android-minSdkVersion" value="9" />
+		<preference name="orientation" value="default" />
+		<preference name="fullscreen" value="false" />
+		<preference name="target-device" value="universal" />
+		<preference name="webviewbounce" value="true" />
+		<preference name="prerendered-icon" value="true" />
+		<preference name="stay-in-webview" value="true" />
+		<preference name="ios-statusbarstyle" value="black-opaque" />
+		<preference name="detect-data-types" value="true" />
+		<preference name="exit-on-suspend" value="true" />
+		<preference name="show-splash-screen-spinner" value="true" />
+		<preference name="auto-hide-splash-screen" value="true" />
+		<preference name="EnableViewportScale" value="true" />
+		<preference name="MediaPlaybackRequiresUserAction" value="true" />
+		<preference name="AllowInlineMediaPlayback" value="true" />
+		<preference name="BackupWebStorage" value="cloud" />
+		<preference name="TopActivityIndicator" value="gray" />
+		<preference name="KeyboardDisplayRequiresUserAction" value="true" />
+		<preference name="HideKeyboardFormAccessoryBar" value="true" />
+		<preference name="SuppressesIncrementalRendering" value="true" />
+		<preference name="android-minSdkVersion" value="7" />
+		<preference name="android-installLocation" value="internalOnly" />
+		<preference name="SplashScreenDelay" value="5000" />
+		<preference name="ErrorUrl" value=""/>
+		<preference name="BackgroundColor" value="0x000000"/>
+		<preference name="KeepRunning" value="true"/>
+		<preference name="DisallowOverscroll" value="true"/>
+		<preference name="LoadingDialog" value=","/> 
+		<preference name="LoadUrlTimeoutValue" value="20000" />
+		<preference name="disable-cursor" value="true" />
+		<gap:platform name="ios" />
+		<gap:platform name="android" />
+		<gap:platform name="winphone" />
+		<plugin name="cordova-plugin-file"           source="npm" spec="2.1.0" />
+        <plugin name="cordova-plugin-file-transfer"  source="npm" spec="1.2.0" />
+        <plugin name="cordova-plugin-geolocation"    source="npm" spec="1.0.1" />
+        <plugin name="cordova-plugin-inappbrowser"   source="npm" spec="1.1.0" />
+        <plugin name="cordova-plugin-network-information" source="npm" spec="1.0.1" />
+        <plugin name="cordova-plugin-whitelist"      source="npm" spec="1.1.0" />
+        <!-- https://www.npmjs.com/package/com.paypal.cordova.mobilesdk -->
+        <plugin name="com.paypal.cordova.mobilesdk"  source="npm" spec="3.1.9" />
+        <!-- https://www.npmjs.com/package/cordova-plugin-x-socialsharing -->
+        <plugin name="cordova-plugin-x-socialsharing" source="npm" spec="5.0.7" />
+        <!-- https://www.npmjs.com/package/cordova-plugin-datepicker -->
+        <plugin name="cordova-plugin-datepicker"  source="npm" spec="0.9.3" />
+        <!-- https://www.npmjs.com/package/cordova-plugin-email-composer -->
+        <plugin name="cordova-plugin-email-composer" source="npm" version="0.8.2" />
+        <!-- https://www.npmjs.com/package/pushwoosh-cordova-plugin -->
+        <plugin name="pushwoosh-cordova-plugin" source="npm" version="3.6.16" />
+        <!-- https://www.npmjs.com/package/cordova-google-play-services -->
+        <plugin name="cordova-google-play-services" source="npm" version="25.0.0" />
+		<icon src="images/icon-57.png" gap:platform="ios" width="57" height="57" />
+		<icon src="images/icon-72.png" gap:platform="ios" width="72" height="72" />
+		<icon src="images/icon-114.png" gap:platform="ios" width="114" height="114" />
+		<icon src="images/icon-144.png" gap:platform="ios" width="144" height="144" />
+		<icon src="images/icon-76.png" gap:platform="ios" width="76" height="76" />
+		<icon src="images/icon-120.png" gap:platform="ios" width="120" height="120" />
+		<icon src="images/icon-152.png" gap:platform="ios" width="152" height="152" />
+		<icon src="images/icon-36.png" gap:platform="android" gap:density="ldpi" />
+		<icon src="images/icon-48.png" gap:platform="android" gap:density="mdpi" />
+		<icon src="images/icon-72.png" gap:platform="android" gap:density="hdpi" />
+		<icon src="images/icon-96.png" gap:platform="android" gap:density="xhdpi" />
+		<icon src="images/icon-144.png" gap:platform="android" gap:density="xxhdpi" />
+		<icon src="images/icon-192.png" gap:platform="android" gap:density="xxxhdpi" />
+		<icon src="images/icon-62.png" gap:platform="winphone" />
+		<icon src="images/icon-173.png" gap:platform="winphone" gap:role="background" />
+		<icon src="icon.png" />
+		<gap:splash src="images/splash-480-320.png" gap:platform="ios" width="320" height="480" />
+		<gap:splash src="images/splash-320-480.png" gap:platform="ios" width="480" height="320" />
+		<gap:splash src="images/splash-960-640.png" gap:platform="ios" width="640" height="960" />
+		<gap:splash src="images/splash-640-960.png" gap:platform="ios" width="960" height="640" />
+		<gap:splash src="images/splash-1136-640.png" gap:platform="ios" width="640" height="1136" />
+		<gap:splash src="images/splash-640-1136.png" gap:platform="ios" width="1136" height="640" />
+		<gap:splash src="images/splash-1024-768.png" gap:platform="ios" width="768" height="1024 " />
+		<gap:splash src="images/splash-768-1024.png" gap:platform="ios" width="1024" height="768" />
+		<gap:splash src="images/splash-400-240.png" gap:platform="android" gap:density="ldpi" />
+		<gap:splash src="images/splash-480-320.png" gap:platform="android" gap:density="mdpi" />
+		<gap:splash src="images/splash-800-480.png" gap:platform="android" gap:density="hdpi" />
+		<gap:splash src="images/splash-960-720.png" gap:platform="android" gap:density="xhdpi" />
+		<gap:splash src="images/splash-1920-1080.png" gap:platform="android" gap:density="xxhdpi" />
+		<gap:splash src="images/splash-800-480.png" gap:platform="winphone" />
+		<gap:splash src="splash.png" />
+        <allow-navigation href="*" />
+        <allow-intent href="*" />
+        <access origin="*" />
+	</widget>

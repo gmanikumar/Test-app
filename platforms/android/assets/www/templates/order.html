@@ -1,0 +1,94 @@
+<ons-page ng-controller="OrderController">
+<md-content style="background:#000000 !important;" ng-if="(items.results | filter : {active: true}).length == 0">
+    <img style="background:#000000 !important;" ng-src="img/emptyOrder.png" width="100%">
+</md-content>
+<md-card ng-if="(items.results | filter : {active: true}).length > 0">
+  <md-card-content>
+    <h3 class="md-subhead" align="center">Review And Submit Order</h3>
+    <md-divider></md-divider>
+    <md-list ng-repeat="item in filtereditem = (items.results | filter:true)">
+      <md-list-item layout="row">
+        <h3><div style="text-align: left;">{{item.name}} <span ng-bind-html="item.span"></span></div><span style="float: left;">Qty:{{item.qty}}</span></h3>
+        <span flex></span>
+        <h3>{{ item.price | currency }}</h3>
+      </md-list-item>
+      <md-list-item layout="row" ng-hide="item.type==(undefined)">
+        <span>Side <span ng-show="item.qty>1">#1</span>:</span><span flex></span><span>{{item.type}}</span>
+        </md-list-item><md-list-item layout="row" ng-show="item.qty>1 && !(item.type==(undefined))">
+        <span>Side #2:</span><span flex></span><span>{{item.type2}}</span>
+        </md-list-item><md-list-item layout="row" ng-show="item.qty>2 && !(item.type==(undefined))">
+        <span>Side #3:</span><span flex></span><span>{{item.type3}}</span>
+        </md-list-item><md-list-item layout="row" ng-show="item.qty>3 && !(item.type==(undefined))">
+        <span>Side #4:</span><span flex></span><span>{{item.type4}}</span>
+        </md-list-item>
+      </md-list>
+      <md-list>
+      <md-list-item layout="row" ng-hide="addonamt(items.results)==0">
+        <span>Add-ons</span>
+        <span>&nbsp;x {{ paypaladdonamt=(addonamt(items.results)) }}</span>
+        <span flex></span>
+        <span>{{ paypaladdon=(addon(items.results) | currency) }}</span>
+      </md-list-item>
+      </md-list>
+    <md-divider></md-divider>
+    <md-list>
+      <md-list-item layout="row">
+        <h3 class="md-subhead">Order Total:</h3>
+        <span flex></span>
+        <h3>{{ (pricetotal = total(items.results)) | currency }}</h3>
+      </md-list-item>
+    </md-list>
+  </md-card-content>
+</md-card>
+<md-card ng-if="(items.results | filter : {active: true}).length > 0">
+  <md-card-content layout-padding>
+Please fill out at least the required elements to place an order.
+    <form name="order" ng-submit="order.$valid && sendMail()" novalidate>
+     <md-input-container flex md-is-error="order.first.$invalid && (order.$submitted || order.first.$dirty)">
+      <label>Name<span style="color:red;">*</span></label>
+      <input ng-model="name" name="first" tabindex="1" ng-required="true">
+              <div ng-messages="order.first.$error" ng-if="order.$submitted || order.first.$touched">
+          <div ng-message="required">Name is required</div>
+        </div>
+     </md-input-container>
+     <md-input-container flex md-is-error="order.second.$invalid && (order.$submitted || order.second.$dirty)">
+         <label>Phone<span style="color:red;">*</span></label>
+      <input ng-model="phone" name="second" tabindex="2" ng-required="true">
+            <div ng-messages="order.second.$error" ng-if="order.$submitted || order.second.$touched">
+          <div ng-message="required">Phone no. is required</div>
+        </div>
+     </md-input-container>
+      <md-input-container flex>
+        <label>Address</label>
+        <input ng-model="address" tabindex="3">
+      </md-input-container>
+      <md-input-container flex md-is-error="order.fourth.$invalid && (order.$submitted || order.fourth.$dirty)">
+        <label>Email<span style="color:red;">*</span></label>
+        <input ng-model="email" name="fourth" tabindex="4" ng-required="true">
+        <div ng-messages="order.fourth.$error" ng-if="order.$submitted || order.fourth.$touched">
+          <div ng-message="required">Email is required</div>
+        </div>
+      </md-input-container>
+      <md-input-container flex>
+        <label>Special Requests</label>
+        <textarea ng-model="requests" 
+                  columns="1" 
+                  md-maxlength="150" tabindex="5"></textarea>
+      </md-input-container>
+      <label>Payment Method:&nbsp;&nbsp;</label>
+            <md-select placeholder="Select a Payment Method" ng-model="payment" ng-change="selectChanged()">
+          <md-option aria-label="side set" class="md-accent" value="Pay at SIGNS">Pay at SIGNS</md-option>
+          <md-option aria-label="side set" class="md-accent" value="Paid with Paypal">Pay with Paypal</md-option>
+        </md-select>
+        <br>
+    <md-button class="md-raised md-primary" ng-controller="EmailController" ng-show="payment=='Pay at SIGNS'" ng-click="order.$valid && sendMail()">
+      Place Order
+    </md-button> 
+    <md-button class="md-raised md-primary" ng-controller="EmailController" ng-show="payment=='Paid with Paypal'" ng-click="order.$valid && pay()">
+      Pay with PayPal
+    </md-button>
+
+  </form>
+  </md-card-content>
+</md-card>
+  </ons-page>

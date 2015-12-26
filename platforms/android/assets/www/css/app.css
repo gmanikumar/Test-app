@@ -1,0 +1,121 @@
+/* 
+* Roots v 2.0.0
+* Follow me @adanarchila at Codecanyon.net
+* URL: http://codecanyon.net/item/roots-phonegapcordova-multipurpose-hybrid-app/9525999
+* Don't forget to rate Roots if you like it! :)
+*/
+
+/* Insert here your custom CSS */
+.md-toolbar-tools {
+    height:44px !important;
+}
+md-content.md-default-theme {
+background-color: #000 !important;
+}
+md-card {
+background-color: #3E3E3E !important;
+}
+md-option {
+    color:white;
+    background-color: black !important;
+}
+span.price.ng-binding, .trip_quote_title {
+    color: #b3bf35 !important;
+    line-height: 25px;
+}
+.trip_member_rating {
+color: yellow;
+}
+span.btn-default.col {
+    background-color: #b3bf35;
+}
+.list--news .list__item--chevron:before {
+display: none !important;
+}
+.list--news .list__item--chevron {
+    background-color: black !important;
+}
+.partnerRvw {
+display: none;
+}
+.list-item-container.ng-scope.list__item.ons-list-item-inner.list__item--chevron {
+background-color: #272727 !important;
+}
+md-list-item h3 {
+    font-size: 18px;
+}
+md-input-container {
+width: 100%;
+}
+a.md-button.md-default-theme.md-accent.md-raised, a.md-button.md-accent.md-raised, a.md-button.md-default-theme.md-accent.md-fab, a.md-button.md-accent.md-fab, .md-button.md-default-theme.md-accent.md-raised, .md-button.md-accent.md-raised, .md-button.md-default-theme.md-accent.md-fab, .md-button.md-accent.md-fab, md-slider.md-default-theme .md-track.md-track-fill, md-slider .md-track.md-track-fill, md-slider.md-default-theme .md-focus-ring, md-slider .md-focus-ring, md-slider.md-default-theme .md-sign, md-slider .md-sign, md-slider.md-default-theme .md-thumb:after, md-slider .md-thumb:after {
+    background-color: #b3bf35 !important;
+}
+a.md-button.md-default-theme.md-primary, a.md-button.md-primary, .md-button.md-default-theme.md-primary, .md-button.md-primary, a.md-button.md-default-theme.md-primary:not([disabled]) md-icon, a.md-button.md-primary:not([disabled]) md-icon, .md-button.md-default-theme.md-primary:not([disabled]) md-icon, .md-button.md-primary:not([disabled]) md-icon {
+    color: #b3bf35 !important;
+}
+a.md-button.md-default-theme.md-primary.md-raised:not([disabled]):hover, a.md-button.md-primary.md-raised:not([disabled]):hover, a.md-button.md-default-theme.md-primary.md-fab:not([disabled]):hover, a.md-button.md-primary.md-fab:not([disabled]):hover, .md-button.md-default-theme.md-primary.md-raised:not([disabled]):hover, .md-button.md-primary.md-raised:not([disabled]):hover, .md-button.md-default-theme.md-primary.md-fab:not([disabled]):hover, .md-button.md-primary.md-fab:not([disabled]):hover, .md-button.md-primary.md-fab {
+    background-color: black !important;
+}
+md-slider.md-default-theme .md-thumb::after, md-slider .md-thumb::after {
+    border-color: #b3bf35 !important;
+}
+md-checkbox.md-default-theme.md-checked .md-ink-ripple, md-checkbox.md-checked .md-ink-ripple {
+    color: rgba(179, 191, 53, 0.87) !important;
+}
+md-select-menu.md-default-theme md-option[selected].md-accent, md-select-menu md-option[selected].md-accent, md-select-menu.md-default-theme md-option[selected].md-accent:focus, md-select-menu md-option[selected].md-accent:focus {
+    color: #b3bf35 !important;
+}
+md-select.md-default-theme:not([disabled]):focus .md-select-value, md-select:not([disabled]):focus .md-select-value {
+    border-bottom-color: #b3bf35 !important;
+    color: rgba(255,255,255,0.87) !important;
+}
+a.md-button.md-default-theme.md-primary.md-raised, a.md-button.md-primary.md-raised, a.md-button.md-default-theme.md-primary.md-fab, a.md-button.md-primary.md-fab, .md-button.md-default-theme.md-primary.md-raised, .md-button.md-primary.md-raised, .md-button.md-default-theme.md-primary.md-fab {
+    color: rgba(255,255,255,0.87) !important;
+    background-color: #b3bf35 !important;
+}
+md-input-container.md-default-theme label, md-input-container.md-default-theme .md-placeholder, md-input-container .md-placeholder {
+    color: rgba(255,255,255,0.87) !important;
+}
+md-input-container.md-default-theme .md-input {
+color: rgba(255, 255, 255, 0.87) !important;
+border-color: rgba(255,255,255,0.87) !important;
+}
+md-checkbox.md-default-theme.md-checked .md-icon, md-checkbox.md-checked .md-icon {
+     background-color: rgba(179, 191, 53, 0.87) !important;
+}
+md-input-container label {
+     color: rgba(179, 191, 53, 0.87) !important;
+}
+md-input-container .md-input {
+     color: rgba(255,255,255,0.87) !important;
+     border-color: rgba(179, 191, 53, 0.87) !important;
+}
+md-input-container.md-default-theme.md-input-invalid .md-input, md-input-container.md-input-invalid .md-input {
+    border-color: rgb(244,67,54) !important;
+}
+.md-no-style.md-list-item-inner {
+padding: 0px !important;
+}
+.page {
+    font-size:15px !important;
+}
+.ons-col-inner .md-fab.md-accent.fab.md-button.md-ink-ripple, .ons-col-inner .md-fab.md-primary.fab.md-button.md-ink-ripple.active {
+top: 40px !important;
+left: 5px !important;
+width: 35px !important;
+height: 25px !important;
+line-height: 25px !important;
+margin: 0px !important;
+}
+.md-select-value span {
+color: white !important;
+}
+md-checkbox.md-default-theme .md-icon, md-checkbox .md-icon {
+border-color: rgba(255, 255, 255, 0.54) !important;
+}
+md-checkbox {
+padding: 0px !important;
+}
+.takeout .list__item--chevron:before {
+    display:none !important;
+}

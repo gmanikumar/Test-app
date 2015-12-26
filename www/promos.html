@@ -1,0 +1,36 @@
+<ons-navigator animation="slide" var="promos">  
+<ons-page>
+  <ons-toolbar>
+    <div class="left">
+      <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" fixed-width="false"></ons-icon></ons-toolbar-button>
+    </div>
+    <div class="center">Promotions</div>
+  </ons-toolbar>
+
+  <div class="app-page" ng-controller="AppController">
+    <ons-list modifier="categories">
+    <div ng-repeat="promo in promos.results">
+      <ons-list-item modifier="chevron" class="list-item-container" ng-click="promos.pushPage('templates/{{promo.page}}');">
+        <ons-row>
+          <ons-col width="125px" style="overflow: hidden;">
+            <img ng-src="{{promo.img}}" class="thumbnail">
+          </ons-col>
+          <ons-col>
+            <div class="item-content">
+              <div class="name">
+                {{promo.name}}
+              </div>
+              <div class="desc">
+                {{promo.desc}}
+              </div>
+            </div>
+          </ons-col>
+        </ons-row>
+      </ons-list-item>
+      </div>
+    </ons-list>
+
+  </div>
+
+</ons-page>  
+</ons-navigator>   

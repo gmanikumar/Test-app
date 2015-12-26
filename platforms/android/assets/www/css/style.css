@@ -1,0 +1,59 @@
+md-content.md-default-theme {
+  background-color: #eee;
+}
+.icon {
+  width: 50px;
+  height: 50px;
+}
+md-card {
+  background-color: #fff;
+}
+md-card h2:first-of-type {
+  margin-top: 0;
+}
+md-toolbar .md-button.md-default-theme {
+  border-radius: 99%;
+}
+h2 {
+  font-weight: 400;
+}
+.md-toolbar-tools-bottom {
+  font-size: small;
+}
+.md-toolbar-tools-bottom :last-child {
+  opacity: 0.8;
+}
+md-toolbar:not(.md-hue-1) {
+  fill: #fff;
+}
+.container {
+  font-size: 16px;
+  line-height: 20px;
+  height: 40px;
+  overflow: hidden;
+}
+.show {
+  overflow: visible;
+  height: auto;
+}
+.fab {
+  position: relative;
+  left: -20px;
+  top: -28px;
+}
+.content {
+  position: relative;
+  top: -50px;
+}
+.vegan {
+    color: lightblue;
+}
+.veg {
+    color: lightgreen;
+}
+.gfree {
+    color: goldenrod;
+}
+.dfree {
+    color: yellow;
+}

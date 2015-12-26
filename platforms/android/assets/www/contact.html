@@ -1,0 +1,58 @@
+<ons-page>
+  <ons-toolbar>
+    <div class="left">
+      <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" fixed-width="false"></ons-icon></ons-toolbar-button>
+    </div>
+    <div class="center">Contact Us</div>
+  </ons-toolbar>
+
+  <div class="app-page">
+    <div class="app-hero app-hero-image">
+      <h2>Contact</h2>
+      <div class="app-hero-overlay"></div>
+      <img src="images/place.png" class="app-hero-bg">
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+    <div class="app-page-contact" ng-controller="ContactController">
+      <form ng-submit="submit(contactform, $event)" name="contactform" method="post" action="" class="form-horizontal" role="form">
+        <div class="form-group" ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
+            <label for="inputName" class="col-lg-2 control-label">Name</label>
+            <div class="col-lg-10">
+                <input ng-model="formData.inputName" type="text" class="form-control" id="inputName" name="inputName" tabindex="1" placeholder="Your Name" required>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
+            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+            <div class="col-lg-10">
+                <input ng-model="formData.inputEmail" type="email" class="form-control" id="inputEmail" name="inputEmail" tabindex="2" placeholder="Your Email" required>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': contactform.inputSubject.$invalid && submitted }">
+            <label for="inputSubject" class="col-lg-2 control-label">Subject</label>
+            <div class="col-lg-10">
+                <input ng-model="formData.inputSubject" type="text" class="form-control" id="inputSubject" name="inputSubject" tabindex="3" placeholder="Subject Message" required>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
+            <label for="inputMessage" class="col-lg-2 control-label">Message</label>
+            <div class="col-lg-10">
+                <textarea ng-model="formData.inputMessage" class="form-control" rows="4" id="inputMessage" name="inputMessage" tabindex="4" placeholder="Your message..." required></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-offset-2 col-lg-10">
+                <button type="submit" class="btn btn-default" ng-disabled="submitButtonDisabled">Send Message</button>
+              </div>
+          </div>
+      </form>
+    <p ng-class="result" style="padding: 15px; margin: 0;">{{ resultMessage }}</p>
+
+    </div>
+
+  </div>
+
+</ons-page>

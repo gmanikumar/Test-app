@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+  <meta http-equiv="Content-Security-Policy" content="default-src * signsrestaurantandbar:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.google.com https://maps.googleapis.com https://s.ytimg.com">
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>Signs Restaurant and Bar</title>  
+
+  <!-- All our CSS -->
+  <!-- onsen-css-components.css is the skin of your app, you can generate one custom skin with this generator: http://components.onsen.io/ -->
+  <link rel="stylesheet" href="lib/onsen/css/onsenui.css">    
+  <link rel="stylesheet" href="css/onsen-css-components.css"> 
+  <link rel="stylesheet" href="css/plugins.css"/>
+  <link rel="stylesheet" href="css/roots.css"/>
+  <link rel="stylesheet" href="css/app.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- These are our JS libraries that make all the magic in our App -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPxz-1cHyiMeAApPZ2JqqOMgWGo2dNt5A" type="text/javascript"></script>
+    <script src="js/youtube.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-animate.js"></script>
+    <script src="js/angular-aria.js"></script>
+    <script src="js/angular-messages.js"></script>
+    <script src="js/angular-material.min.js"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+    <script src="js/angular-sanitize.js"></script>    
+  <script src="lib/onsen/js/angular/angular-touch.js"></script>   
+  <script src="lib/onsen/js/onsenui.js"></script>
+  <script src="cordova.js"></script>
+  <script type="text/javascript" src="js/paypal-mobile-js-helper.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/app.js"></script> 
+</head>
+
+<body ng-controller="networkController">
+  <ons-sliding-menu
+    menu-page="menu.html" main-page="templates/3.html" side="left"
+    var="menu" type="reveal" max-slide-distance="200px" swipable="true" swipe-target-width="50">
+  </ons-sliding-menu>
+
+  <!-- Insert the modal in your index.html -->
+  <!-- Change the message to anything you want, this message will be if the user doesn't have any network connection -->
+  <ons-modal var="offlineMessage">
+    Unable to connect to the Internet.<br> Possibly due to a network error.<br>
+    Please verify your connection. 
+  </ons-modal>
+
+</body>
+</html>

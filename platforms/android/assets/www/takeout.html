@@ -1,0 +1,25 @@
+  <ons-navigator animation="slide" var="takeout">  
+  <ons-page ng-controller="AppController">          
+    <link rel="stylesheet" href="css/angular-material.css">
+    <link rel="stylesheet" href="css/font.css"> 
+    <ons-toolbar>  
+        <div class="left">
+        <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" fixed-width="false"></ons-icon></ons-toolbar-button>
+        <div class="center">Take Out</div>
+        </div>                           
+ 
+      </ons-toolbar>
+     <ons-tabbar>
+                 <ons-tab page="templates/menu.html" active="true" icon="ion-fork"
+                         ui-sref="menu" label="Menu">
+                         
+                 </ons-tab>
+                 <ons-tab page="templates/options.html" icon="ion-ios-toggle" 
+                         ui-sref="options" label="Order">
+                 </ons-tab>
+                 <ons-tab page="templates/order.html" icon="ion-android-cart" 
+                         ui-sref="order" label="Checkout">
+                 </ons-tab>
+        </ons-tabbar>
+    </ons-page>
+</ons-navigator>
